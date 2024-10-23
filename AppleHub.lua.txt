@@ -11391,11 +11391,6 @@ local PolePos = CFrame.new(-7748.0185546875, 5606.80615234375, -2305.89868164062
         end)
     end)
 
-Misc:AddButton("เอาคลบเพลิง",function()
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(5749.7861328125, 611.9736938476562, -276.2497863769531))
-    wait(1)
-    topos(CFrame.new(5154.54785, 142.129684, 916.826294, 0.00160392188, 7.16881203e-08, 0.999998689, 4.34501235e-09, 1, -7.1695176e-08, -0.999998689, 4.45999992e-09, 0.00160392188))
-end)
     M:AddToggle("ออโต้ จุดคบเพลิง",_G.AutoHolyTorch,function(value)
         _G.AutoHolyTorch = value
         StopTween(_G.AutoHolyTorch)
