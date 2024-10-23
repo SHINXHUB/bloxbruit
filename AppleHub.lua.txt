@@ -4478,9 +4478,14 @@ end)
 --------------------------------------------------------------------------------------------------------
 Settings:AddSeperator("ส่วนเสริม")
 
-local WeaponList = {"หมัด","ดาบ","ผล"}
+	Settings:AddToggle("ออโต้ หยุดบิน",true,function(value)
+		topos(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+		_G.Clip = value
+	end)
+	
+local WeaponList = {"หมัด","ดาบ","ผล","ปืน"}
 _G.SelectWeapon = "หมัด"
-Settings:AddDropdown("เลือกอาวุธ",WeaponList,function(value)
+Settings:AddDropdown("Select Weapon",WeaponList,function(value)
 _G.SelectWeapon = value
 end)
 
